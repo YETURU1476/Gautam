@@ -1,0 +1,206 @@
+2020-03-29T14:09:38.6917189Z ##[section]Starting: Build and push an image to container registry
+2020-03-29T14:09:38.6926265Z ==============================================================================
+2020-03-29T14:09:38.6927108Z Task         : Docker
+2020-03-29T14:09:38.6927427Z Description  : Build or push Docker images, login or logout, or run a Docker command
+2020-03-29T14:09:38.6927757Z Version      : 2.166.0
+2020-03-29T14:09:38.6928004Z Author       : Microsoft Corporation
+2020-03-29T14:09:38.6928311Z Help         : https://aka.ms/azpipes-docker-tsg
+2020-03-29T14:09:38.6928823Z ==============================================================================
+2020-03-29T14:09:39.1182483Z afb9fd7d-57e9-4896-97e3-5ef1679b15d7 exists true
+2020-03-29T14:09:39.1801322Z [command]/usr/bin/docker build -f /home/vsts/work/1/s/app/Dockerfile --label com.azure.dev.image.system.teamfoundationcollectionuri=https://dev.azure.com/ZFDevOpsPoc/ --label com.azure.dev.image.system.teamproject=DevOps_PlayGround --label com.azure.dev.image.build.repository.name=DevOps_PlayGround --label com.azure.dev.image.build.sourceversion=4e4b79914b9c6193a14e413ae23dbc517a12a23d --label com.azure.dev.image.build.repository.uri=https://ZFDevOpsPoc@dev.azure.com/ZFDevOpsPoc/DevOps_PlayGround/_git/DevOps_PlayGround --label com.azure.dev.image.build.sourcebranchname=master --label com.azure.dev.image.build.definitionname=DevOps_PlayGround (1) --label com.azure.dev.image.build.buildnumber=20200329.1 --label com.azure.dev.image.build.builduri=vstfs:///Build/Build/1520 -t ***.azurecr.io/dockerimage:latest /home/vsts/work/1/s/app
+2020-03-29T14:09:39.6064661Z Sending build context to Docker daemon  19.46kB
+2020-03-29T14:09:39.6065600Z 
+2020-03-29T14:09:39.6270383Z Step 1/16 : FROM node:8
+2020-03-29T14:09:40.9715603Z 8: Pulling from library/node
+2020-03-29T14:09:41.3424123Z 146bd6a88618: Pulling fs layer
+2020-03-29T14:09:41.3443673Z 9935d0c62ace: Pulling fs layer
+2020-03-29T14:09:41.3444296Z db0efb86e806: Pulling fs layer
+2020-03-29T14:09:41.3445175Z e705a4c4fd31: Pulling fs layer
+2020-03-29T14:09:41.3445777Z c877b722db6f: Pulling fs layer
+2020-03-29T14:09:41.3446342Z 645c20ec8214: Pulling fs layer
+2020-03-29T14:09:41.3447108Z db8fbd9db2fe: Pulling fs layer
+2020-03-29T14:09:41.3447474Z 1c151cd1b3ea: Pulling fs layer
+2020-03-29T14:09:41.3447830Z fbd993995f40: Pulling fs layer
+2020-03-29T14:09:41.3448178Z e705a4c4fd31: Waiting
+2020-03-29T14:09:41.3448528Z c877b722db6f: Waiting
+2020-03-29T14:09:41.3448801Z 645c20ec8214: Waiting
+2020-03-29T14:09:41.3449107Z db8fbd9db2fe: Waiting
+2020-03-29T14:09:41.3449437Z 1c151cd1b3ea: Waiting
+2020-03-29T14:09:41.3449720Z fbd993995f40: Waiting
+2020-03-29T14:09:41.8761250Z db0efb86e806: Verifying Checksum
+2020-03-29T14:09:41.8766482Z db0efb86e806: Download complete
+2020-03-29T14:09:42.0125104Z 9935d0c62ace: Verifying Checksum
+2020-03-29T14:09:42.0125657Z 9935d0c62ace: Download complete
+2020-03-29T14:09:42.1943495Z 146bd6a88618: Verifying Checksum
+2020-03-29T14:09:42.1960188Z 146bd6a88618: Download complete
+2020-03-29T14:09:42.6691492Z 645c20ec8214: Verifying Checksum
+2020-03-29T14:09:42.6697940Z 645c20ec8214: Download complete
+2020-03-29T14:09:43.0073754Z e705a4c4fd31: Verifying Checksum
+2020-03-29T14:09:43.0074729Z e705a4c4fd31: Download complete
+2020-03-29T14:09:43.5478021Z 1c151cd1b3ea: Verifying Checksum
+2020-03-29T14:09:43.5482767Z 1c151cd1b3ea: Download complete
+2020-03-29T14:09:43.5592008Z db8fbd9db2fe: Verifying Checksum
+2020-03-29T14:09:43.5611554Z db8fbd9db2fe: Download complete
+2020-03-29T14:09:43.9941641Z fbd993995f40: Verifying Checksum
+2020-03-29T14:09:43.9946133Z fbd993995f40: Download complete
+2020-03-29T14:09:44.1258678Z c877b722db6f: Verifying Checksum
+2020-03-29T14:09:44.1258964Z c877b722db6f: Download complete
+2020-03-29T14:09:44.7018796Z 146bd6a88618: Pull complete
+2020-03-29T14:09:45.0305213Z 9935d0c62ace: Pull complete
+2020-03-29T14:09:45.1554881Z db0efb86e806: Pull complete
+2020-03-29T14:09:46.9988312Z e705a4c4fd31: Pull complete
+2020-03-29T14:09:54.0485501Z c877b722db6f: Pull complete
+2020-03-29T14:09:54.0884981Z 645c20ec8214: Pull complete
+2020-03-29T14:09:56.2951198Z db8fbd9db2fe: Pull complete
+2020-03-29T14:09:56.3747600Z 1c151cd1b3ea: Pull complete
+2020-03-29T14:09:56.4086940Z fbd993995f40: Pull complete
+2020-03-29T14:09:57.3830022Z Digest: sha256:a681bf74805b80d03eb21a6c0ef168a976108a287a74167ab593fc953aac34df
+2020-03-29T14:09:57.3837604Z Status: Downloaded newer image for node:8
+2020-03-29T14:09:57.3838819Z  ---> 8eeadf3757f4
+2020-03-29T14:09:57.3839314Z Step 2/16 : WORKDIR /usr/src/app
+2020-03-29T14:10:03.8517954Z  ---> Running in 01160dda6b26
+2020-03-29T14:10:05.1150719Z Removing intermediate container 01160dda6b26
+2020-03-29T14:10:05.1151616Z  ---> 75cc1ac68329
+2020-03-29T14:10:05.1151838Z Step 3/16 : COPY package*.json ./
+2020-03-29T14:10:06.4469756Z  ---> a808e885c2da
+2020-03-29T14:10:06.4470267Z Step 4/16 : RUN npm ci --only=production
+2020-03-29T14:10:06.4768131Z  ---> Running in e6bf2477b1d4
+2020-03-29T14:10:08.0438697Z added 48 packages in 0.785s
+2020-03-29T14:10:09.6113850Z Removing intermediate container e6bf2477b1d4
+2020-03-29T14:10:09.6114819Z  ---> 2923f8c27677
+2020-03-29T14:10:09.6115016Z Step 5/16 : COPY . .
+2020-03-29T14:10:10.9491438Z  ---> 6a7aa13897f6
+2020-03-29T14:10:10.9491795Z Step 6/16 : EXPOSE 8080
+2020-03-29T14:10:10.9814010Z  ---> Running in d72827609043
+2020-03-29T14:10:12.2636038Z Removing intermediate container d72827609043
+2020-03-29T14:10:12.2637373Z  ---> 702e8292a88e
+2020-03-29T14:10:12.2637851Z Step 7/16 : CMD [ "npm", "start" ]
+2020-03-29T14:10:12.2929101Z  ---> Running in a31d9bf164af
+2020-03-29T14:10:13.5781436Z Removing intermediate container a31d9bf164af
+2020-03-29T14:10:13.5782765Z  ---> 6e7052a9a2f5
+2020-03-29T14:10:13.5783066Z Step 8/16 : LABEL com.azure.dev.image.build.buildnumber=20200329.1
+2020-03-29T14:10:13.6089486Z  ---> Running in 0eebabaecc06
+2020-03-29T14:10:14.9084496Z Removing intermediate container 0eebabaecc06
+2020-03-29T14:10:14.9085407Z  ---> 296a8da1cb44
+2020-03-29T14:10:14.9085725Z Step 9/16 : LABEL com.azure.dev.image.build.builduri=vstfs:///Build/Build/1520
+2020-03-29T14:10:14.9427926Z  ---> Running in 4af4f0251dea
+2020-03-29T14:10:16.2490534Z Removing intermediate container 4af4f0251dea
+2020-03-29T14:10:16.2491994Z  ---> cf84867afabe
+2020-03-29T14:10:16.2492681Z Step 10/16 : LABEL com.azure.dev.image.build.definitionname=DevOps_PlayGround (1)
+2020-03-29T14:10:16.2649214Z  ---> Running in e31780f20b18
+2020-03-29T14:10:17.5858020Z Removing intermediate container e31780f20b18
+2020-03-29T14:10:17.5859743Z  ---> 6dac320b1e2c
+2020-03-29T14:10:17.5860424Z Step 11/16 : LABEL com.azure.dev.image.build.repository.name=DevOps_PlayGround
+2020-03-29T14:10:17.6039725Z  ---> Running in c464876297ee
+2020-03-29T14:10:18.9091883Z Removing intermediate container c464876297ee
+2020-03-29T14:10:18.9093309Z  ---> 59ea709ca38b
+2020-03-29T14:10:18.9093778Z Step 12/16 : LABEL com.azure.dev.image.build.repository.uri=https://ZFDevOpsPoc@dev.azure.com/ZFDevOpsPoc/DevOps_PlayGround/_git/DevOps_PlayGround
+2020-03-29T14:10:18.9419789Z  ---> Running in 5d11123ad8ee
+2020-03-29T14:10:20.2233260Z Removing intermediate container 5d11123ad8ee
+2020-03-29T14:10:20.2234831Z  ---> 87524446d36e
+2020-03-29T14:10:20.2235503Z Step 13/16 : LABEL com.azure.dev.image.build.sourcebranchname=master
+2020-03-29T14:10:20.2386037Z  ---> Running in f4d414f17b05
+2020-03-29T14:10:21.5617408Z Removing intermediate container f4d414f17b05
+2020-03-29T14:10:21.5618777Z  ---> 153b35fe05e1
+2020-03-29T14:10:21.5619148Z Step 14/16 : LABEL com.azure.dev.image.build.sourceversion=4e4b79914b9c6193a14e413ae23dbc517a12a23d
+2020-03-29T14:10:21.5933465Z  ---> Running in 5da45191c3ce
+2020-03-29T14:10:22.8768081Z Removing intermediate container 5da45191c3ce
+2020-03-29T14:10:22.8769024Z  ---> 305d381580f3
+2020-03-29T14:10:22.8769394Z Step 15/16 : LABEL com.azure.dev.image.system.teamfoundationcollectionuri=https://dev.azure.com/ZFDevOpsPoc/
+2020-03-29T14:10:22.9065680Z  ---> Running in 70889f4ba24b
+2020-03-29T14:10:24.1695685Z Removing intermediate container 70889f4ba24b
+2020-03-29T14:10:24.1697017Z  ---> 9b65f0018884
+2020-03-29T14:10:24.1697425Z Step 16/16 : LABEL com.azure.dev.image.system.teamproject=DevOps_PlayGround
+2020-03-29T14:10:24.1994855Z  ---> Running in 079cb3ead282
+2020-03-29T14:10:25.5320610Z Removing intermediate container 079cb3ead282
+2020-03-29T14:10:25.5321497Z  ---> ce0e2e5dc38b
+2020-03-29T14:10:25.5321719Z Successfully built ce0e2e5dc38b
+2020-03-29T14:10:25.5369593Z Successfully tagged ***.azurecr.io/dockerimage:latest
+2020-03-29T14:10:25.5493228Z [command]/usr/bin/docker images
+2020-03-29T14:10:25.5638728Z [command]/usr/bin/docker push ***.azurecr.io/dockerimage:latest
+2020-03-29T14:10:25.5935656Z REPOSITORY                                           TAG                 IMAGE ID            CREATED                  SIZE
+2020-03-29T14:10:25.5936646Z ***.azurecr.io/dockerimage                        latest              ce0e2e5dc38b        Less than a second ago   903MB
+2020-03-29T14:10:25.5937630Z node                                                 10                  aa6432763c11        4 weeks ago              911MB
+2020-03-29T14:10:25.5938228Z node                                                 12                  d834cbcf2402        4 weeks ago              916MB
+2020-03-29T14:10:25.5939206Z buildpack-deps                                       stretch             c470a323aeec        4 weeks ago              835MB
+2020-03-29T14:10:25.5939687Z debian                                               9                   6b14557ccda6        4 weeks ago              101MB
+2020-03-29T14:10:25.5940294Z debian                                               8                   00b72214a37e        4 weeks ago              129MB
+2020-03-29T14:10:25.5941649Z node                                                 10-alpine           29fc59abc5de        5 weeks ago              83.5MB
+2020-03-29T14:10:25.5942488Z node                                                 12-alpine           927d03058714        5 weeks ago              88.1MB
+2020-03-29T14:10:25.5943088Z alpine                                               3.8                 c8bccc0af957        2 months ago             4.41MB
+2020-03-29T14:10:25.5943644Z alpine                                               3.9                 82f67be598eb        2 months ago             5.53MB
+2020-03-29T14:10:25.5944208Z alpine                                               3.10                af341ccd2df8        2 months ago             5.56MB
+2020-03-29T14:10:25.5944828Z node                                                 8                   8eeadf3757f4        3 months ago             901MB
+2020-03-29T14:10:25.5945313Z jekyll/builder                                       latest              4605d94a6b36        5 months ago             564MB
+2020-03-29T14:10:25.5945908Z alpine                                               3.7                 6d1ef012b567        12 months ago            4.21MB
+2020-03-29T14:10:25.5946773Z mcr.microsoft.com/azure-pipelines/node8-typescript   latest              9a948d360778        17 months ago            595MB
+2020-03-29T14:10:25.7101735Z The push refers to repository [***.azurecr.io/dockerimage]
+2020-03-29T14:10:25.7863638Z f257fef9850a: Preparing
+2020-03-29T14:10:25.7864074Z 48ba5f693b43: Preparing
+2020-03-29T14:10:25.7864323Z 477191016d58: Preparing
+2020-03-29T14:10:25.7864543Z 2bfe510411ba: Preparing
+2020-03-29T14:10:25.7864783Z 423451ed44f2: Preparing
+2020-03-29T14:10:25.7865415Z b2aaf85d6633: Preparing
+2020-03-29T14:10:25.7865646Z 88601a85ce11: Preparing
+2020-03-29T14:10:25.7865859Z 42f9c2f9c08e: Preparing
+2020-03-29T14:10:25.7866090Z 99e8bd3efaaf: Preparing
+2020-03-29T14:10:25.7866477Z bee1e39d7c3a: Preparing
+2020-03-29T14:10:25.7866881Z 1f59a4b2e206: Preparing
+2020-03-29T14:10:25.7867240Z 0ca7f54856c0: Preparing
+2020-03-29T14:10:25.7867452Z ebb9ae013834: Preparing
+2020-03-29T14:10:25.7867642Z b2aaf85d6633: Waiting
+2020-03-29T14:10:25.7867845Z 88601a85ce11: Waiting
+2020-03-29T14:10:25.7868032Z 42f9c2f9c08e: Waiting
+2020-03-29T14:10:25.7868234Z 99e8bd3efaaf: Waiting
+2020-03-29T14:10:25.7868593Z bee1e39d7c3a: Waiting
+2020-03-29T14:10:25.7868775Z 1f59a4b2e206: Waiting
+2020-03-29T14:10:25.7869212Z 0ca7f54856c0: Waiting
+2020-03-29T14:10:25.7869395Z ebb9ae013834: Waiting
+2020-03-29T14:10:26.7714653Z 2bfe510411ba: Pushed
+2020-03-29T14:10:26.7748316Z 423451ed44f2: Pushed
+2020-03-29T14:10:26.8807064Z 477191016d58: Pushed
+2020-03-29T14:10:26.9587243Z 48ba5f693b43: Pushed
+2020-03-29T14:10:26.9588836Z f257fef9850a: Pushed
+2020-03-29T14:10:28.6226067Z b2aaf85d6633: Pushed
+2020-03-29T14:10:28.8854284Z 42f9c2f9c08e: Pushed
+2020-03-29T14:10:30.8696318Z 1f59a4b2e206: Pushed
+2020-03-29T14:10:33.2580428Z 0ca7f54856c0: Pushed
+2020-03-29T14:10:40.5218978Z 88601a85ce11: Pushed
+2020-03-29T14:10:41.9305100Z ebb9ae013834: Pushed
+2020-03-29T14:10:42.1889473Z bee1e39d7c3a: Pushed
+2020-03-29T14:11:02.2256513Z 99e8bd3efaaf: Pushed
+2020-03-29T14:11:03.4009761Z latest: digest: sha256:a309b687b31cb5187cee12f099d33d55b0c956c10dc346b604abb40c6066c109 size: 3049
+2020-03-29T14:11:03.4069931Z [command]/usr/bin/docker history --format createdAt:{{.CreatedAt}}; layerSize:{{.Size}}; createdBy:{{.CreatedBy}}; layerId:{{.ID}} --no-trunc ***.azurecr.io/dockerimage:latest
+2020-03-29T14:11:03.4489752Z createdAt:2020-03-29T14:10:25Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.system.teamproject=DevOps_PlayGround; layerId:sha256:ce0e2e5dc38b2eb067880ba03239ec98fbacdcce08d47a0493ecaa1d335d2b93
+2020-03-29T14:11:03.4491430Z createdAt:2020-03-29T14:10:24Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.system.teamfoundationcollectionuri=https://dev.azure.com/ZFDevOpsPoc/; layerId:sha256:9b65f0018884329966439ea7191d15001c55cdade7a46cc34e6b70e83989d662
+2020-03-29T14:11:03.4493224Z createdAt:2020-03-29T14:10:22Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.sourceversion=4e4b79914b9c6193a14e413ae23dbc517a12a23d; layerId:sha256:305d381580f30425de05810bcf679c0a0bcf0483ce9258afd9c509382b4a782f
+2020-03-29T14:11:03.4494602Z createdAt:2020-03-29T14:10:21Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.sourcebranchname=master; layerId:sha256:153b35fe05e1d024fa711e4ae306a86f506af8b56969d573070a252f25c1d42b
+2020-03-29T14:11:03.4496838Z createdAt:2020-03-29T14:10:20Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.repository.uri=https://ZFDevOpsPoc@dev.azure.com/ZFDevOpsPoc/DevOps_PlayGround/_git/DevOps_PlayGround; layerId:sha256:87524446d36edaa874da8b7c4fb94cc16e7d62978c87bcd3f263e3ec50f7791f
+2020-03-29T14:11:03.4499446Z createdAt:2020-03-29T14:10:18Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.repository.name=DevOps_PlayGround; layerId:sha256:59ea709ca38ba10751eadff8f8cd4bf76b3de743fd8a9c6a422efc6f9aae39c9
+2020-03-29T14:11:03.4501157Z createdAt:2020-03-29T14:10:17Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.definitionname=DevOps_PlayGround (1); layerId:sha256:6dac320b1e2c5dfe28a4dac4f2c09a94ff834bd485eeef36bf6bc57fef56ec37
+2020-03-29T14:11:03.4502853Z createdAt:2020-03-29T14:10:16Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.builduri=vstfs:///Build/Build/1520; layerId:sha256:cf84867afabe3ed7577ae091ee11bd50897b1d4ceca2bebe8a5891b06531fccb
+2020-03-29T14:11:03.4504325Z createdAt:2020-03-29T14:10:14Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  LABEL com.azure.dev.image.build.buildnumber=20200329.1; layerId:sha256:296a8da1cb4447f069da24003155fc0db9ea95cc4f0aa568393a55700ef97ab2
+2020-03-29T14:11:03.4505987Z createdAt:2020-03-29T14:10:13Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  CMD ["npm" "start"]; layerId:sha256:6e7052a9a2f512c7bc120832907ca35b67b6ec5d7d5ee1866dba0ef7ea09047f
+2020-03-29T14:11:03.4508289Z createdAt:2020-03-29T14:10:12Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  EXPOSE 8080; layerId:sha256:702e8292a88ea6518a8d0b5030f7d8468a3cd9bf1667ef51d92aa2fed8af8bce
+2020-03-29T14:11:03.4511272Z createdAt:2020-03-29T14:10:10Z; layerSize:412B; createdBy:/bin/sh -c #(nop) COPY dir:576f79378d3b17256b6ea9d767cc8cd61e5ec320ea67eb34bcaad460d731bd3f in . ; layerId:sha256:6a7aa13897f6c434a58281d0101823dcb1d8ff51770d93d7fc81cb97808376e7
+2020-03-29T14:11:03.4514194Z createdAt:2020-03-29T14:10:09Z; layerSize:2.18MB; createdBy:/bin/sh -c npm ci --only=production; layerId:sha256:2923f8c276772101c9348eaaa82404a178b08e696e32cfc0d05b4354db1d4e6a
+2020-03-29T14:11:03.4515951Z createdAt:2020-03-29T14:10:06Z; layerSize:13.6kB; createdBy:/bin/sh -c #(nop) COPY multi:fbb2e7a9be025a7acafbb71da6884e1098b96d42b3a0a7581ccf690707f66b6e in ./ ; layerId:sha256:a808e885c2daac267cc37899ad5cb28e6441c00b34a1cee287eabc44ee0c8140
+2020-03-29T14:11:03.4517630Z createdAt:2020-03-29T14:10:05Z; layerSize:0B; createdBy:/bin/sh -c #(nop) WORKDIR /usr/src/app; layerId:sha256:75cc1ac6832999e08c59a6e9fcf896410df520c1b81070ce740bdc0c7b1615ec
+2020-03-29T14:11:03.4520130Z createdAt:2019-12-28T23:33:08Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  CMD ["node"]; layerId:sha256:8eeadf3757f41ffbde6fbb4bbbe14f9f5b9ce33cc1aa88bb5c0b4d6e9467509d
+2020-03-29T14:11:03.4525083Z createdAt:2019-12-28T23:33:08Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  ENTRYPOINT ["docker-entrypoint.sh"]; layerId:<missing>
+2020-03-29T14:11:03.4543372Z createdAt:2019-12-28T23:33:08Z; layerSize:116B; createdBy:/bin/sh -c #(nop) COPY file:238737301d47304174e4d24f4def935b29b3069c03c72ae8de97d94624382fce in /usr/local/bin/ ; layerId:<missing>
+2020-03-29T14:11:03.4558251Z createdAt:2019-12-28T23:33:08Z; layerSize:5.48MB; createdBy:/bin/sh -c set -ex   && for key in     6A010C5166006599AA17F08146C2130DFD2497F5   ; do     gpg --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys "$key" ||     gpg --batch --keyserver hkp://ipv4.pool.sks-keyservers.net --recv-keys "$key" ||     gpg --batch --keyserver hkp://pgp.mit.edu:80 --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz"   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc"   && gpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && mkdir -p /opt   && tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz; layerId:<missing>
+2020-03-29T14:11:03.4563692Z createdAt:2019-12-28T23:33:04Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  ENV YARN_VERSION=1.21.1; layerId:<missing>
+2020-03-29T14:11:03.4571222Z createdAt:2019-12-28T23:33:03Z; layerSize:60.3MB; createdBy:/bin/sh -c ARCH= && dpkgArch="$(dpkg --print-architecture)"   && case "${dpkgArch##*-}" in     amd64) ARCH='x64';;     ppc64el) ARCH='ppc64le';;     s390x) ARCH='s390x';;     arm64) ARCH='arm64';;     armhf) ARCH='armv7l';;     i386) ARCH='x86';;     *) echo "unsupported architecture"; exit 1 ;;   esac   && set -ex   && for key in     94AE36675C464D64BAFA68DD7434390BDBE9B9C5     FD3A5288F042B6850C66B31F09FE44734EB7990E     71DCFD284A79C3B38668286BC97EC7A07EDE3FC1     DD8F2338BAE7501E3DD5AC78C273792F7D83545D     C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8     B9AE9905FFD7803F25714661B63B535A4C206CA9     77984A986EBC2AA786BC0F66B01FBB92821C587A     8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600     4ED778F539E3634C779C87C6D7062848A1AB005C     A48C2BEE680E841632CD4E44F07496B3EB3C1762     B9E2F5981AA6E0CD28160D9FF13993A75599653C   ; do     gpg --batch --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys "$key" ||     gpg --batch --keyserver hkp://ipv4.pool.sks-keyservers.net --recv-keys "$key" ||     gpg --batch --keyserver hkp://pgp.mit.edu:80 --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH.tar.xz"   && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256 .txt.asc" 
+&& gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc   && grep " node-v$NODE_VERSION-linux-$ARCH.tar.xz\$" SHASUMS256.txt | sha256sum -c -   && tar -xJf "node-v$NODE_VERSION-linux-$ARCH.tar.xz" -C /usr/local --strip-components=1 --no-same-owner   && rm "node-v$NODE_VERSION-linux-$ARCH.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt   && ln -s /usr/local/bin/node /usr/local/bin/nodejs; layerId:<missing>
+2020-03-29T14:11:03.4585171Z createdAt:2019-12-28T23:32:57Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  ENV NODE_VERSION=8.17.0; layerId:<missing>
+2020-03-29T14:11:03.4586459Z createdAt:2019-12-28T23:32:56Z; layerSize:333kB; createdBy:/bin/sh -c groupadd --gid 1000 node   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node; layerId:<missing>
+2020-03-29T14:11:03.4646945Z createdAt:2019-12-28T05:00:01Z; layerSize:562MB; createdBy:/bin/sh -c set -ex;  apt-get update;  apt-get install -y --no-install-recommends   autoconf   automake   bzip2   dpkg-dev   file   g++   gcc   imagemagick   libbz2-dev   libc6-dev   libcurl4-openssl-dev   libdb-dev   libevent-dev   libffi-dev   libgdbm-dev   libglib2.0-dev   libgmp-dev   libjpeg-dev   libkrb5-dev   liblzma-dev   libmagickcore-dev   libmagickwand-dev   libmaxminddb-dev   libncurses5-dev   libncursesw5-dev   libpng-dev   libpq-dev   libreadline-dev   libsqlite3-dev   libssl-dev   libtool   libwebp-dev   libxml2-dev   libxslt-dev   libyaml-dev   make   patch   unzip   xz-utils   zlib1g-dev     $(    if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then     echo 'default-libmysqlclient-dev';    else     echo 'libmysqlclient-dev';    fi   )  ;  rm -rf /var/lib/apt/lists/*; layerId:<missing>
+2020-03-29T14:11:03.4649286Z createdAt:2019-12-28T04:59:04Z; layerSize:142MB; createdBy:/bin/sh -c apt-get update && apt-get install -y --no-install-recommends   bzr   git   mercurial   openssh-client   subversion     procps  && rm -rf /var/lib/apt/lists/*; layerId:<missing>
+2020-03-29T14:11:03.4651365Z createdAt:2019-12-28T04:58:38Z; layerSize:7.81MB; createdBy:/bin/sh -c set -ex;  if ! command -v gpg > /dev/null; then   apt-get update;   apt-get install -y --no-install-recommends    gnupg    dirmngr   ;   rm -rf /var/lib/apt/lists/*;  fi; layerId:<missing>
+2020-03-29T14:11:03.4653558Z createdAt:2019-12-28T04:58:32Z; layerSize:23.3MB; createdBy:/bin/sh -c apt-get update && apt-get install -y --no-install-recommends   ca-certificates   curl   netbase   wget  && rm -rf /var/lib/apt/lists/*; layerId:<missing>
+2020-03-29T14:11:03.4654856Z createdAt:2019-12-28T04:23:34Z; layerSize:0B; createdBy:/bin/sh -c #(nop)  CMD ["bash"]; layerId:<missing>
+2020-03-29T14:11:03.4655909Z createdAt:2019-12-28T04:23:33Z; layerSize:101MB; createdBy:/bin/sh -c #(nop) ADD file:8f7dc710e276f54a3a73d34b6b8fa261950a781d68ceb7401fa18dabc601c5a5 in / ; layerId:<missing>
+2020-03-29T14:11:03.4660181Z [command]/usr/bin/docker inspect ce0e2e5dc38b2eb067880ba03239ec98fbacdcce08d47a0493ecaa1d335d2b93 -f {{.RootFS.Layers}}
+2020-03-29T14:11:03.5124337Z [sha256:ebb9ae013834b54e76c8d7dfde0ca9018f6bb3495740356a8f1dc655a8552130 sha256:0ca7f54856c0baa7f6beecab94a76531965d5d9e079f2fe1761c5173f2f0d9f6 sha256:1f59a4b2e20603f508265d81a77daeafcb7686ed15a1bc07ba5af4d0caeb7993 sha256:bee1e39d7c3ad8f2dac018953a77aeb84d2f8f656e65e046725c32be1926324a sha256:99e8bd3efaaf5af1813cc039cbb9898bb2c4e32aeb8b25faa3c6da9db5762db5 sha256:42f9c2f9c08ecbf1f6b86d712bc083ebfeceba87d3ccc4b7b324732e1ebe4059 sha256:88601a85ce1172c4694087be29afdfb5ddccacc68bfe3866db52c5c3b0802ccb sha256:b2aaf85d6633012767246fe2108648156a0006fa073d2385144a3a8e3a0afaf0 sha256:423451ed44f2ccd0b855da45c76e43fcd341c0716e12c59a05d0dcf0e6d8d1cd sha256:2bfe510411ba4328fd23b760fbc3c3e59c9c2cfec38090451c4532864afc2fee sha256:477191016d58c59327014869938a16b178e089515869a922111028a8c5dabf67 sha256:48ba5f693b43940ddd7128212e47b9c35240fc7725db4287519fbc35b4594715 sha256:f257fef9850a2aac8851d6d927c78245d0501f846f3cd1a705d14500b6fe1d1b]
+2020-03-29T14:11:03.5846976Z ##[section]Finishing: Build and push an image to container registry
